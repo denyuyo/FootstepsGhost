@@ -11,5 +11,11 @@ devise_for :users, skip: [:passwords],  controllers: {
 devise_for :admin, skip: [:registrations, :passwords], controllers: {
   sessions: "admin/sessions"
 }
-  
+
+# トップページとアバウトページのルート設定
+  get '/', to: 'public/homes#top'
+  get '/about', to: 'public/homes#about'
+
+
+
 end
